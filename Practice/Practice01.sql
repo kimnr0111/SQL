@@ -61,10 +61,9 @@ order by LENGTH(department_name) desc;
 --문제 9.
 select upper(country_name)
 from countries
-join locations
-on locations.country_id = countries.country_id
-group by country_name
+where region_id != 4
 order by country_name asc;
+
 
 --문제 10.
 select first_name "이름",
