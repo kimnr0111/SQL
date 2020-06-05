@@ -19,6 +19,7 @@ select first_name || ' ' || last_name,
        salary
 from employees
 where manager_id is not null
+and salary > 3000
 and commission_pct is null;
 
 --문제 4.
@@ -33,6 +34,8 @@ select first_name,
        salary,
        nvl(commission_pct, 0)
 from employees
+where 14000 > salary 
+and salary >= 10000
 order by salary desc;
 
 --문제 6.
@@ -40,7 +43,8 @@ select first_name,
        salary,
        to_char(hire_date, 'YYYY-MM'),
        department_id
-from employees;
+from employees
+where department_id in (10, 90, 100);
 
 --문제 7.
 select first_name,
