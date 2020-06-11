@@ -116,6 +116,7 @@ where department_id = (select department_id
                        );
 
 --¹®Á¦ 9.
+
 select l.country_id,
        avg(avgs) avgs
 from locations l ,(select d.location_id,
